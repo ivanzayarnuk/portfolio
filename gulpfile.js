@@ -1,12 +1,13 @@
 const gulp        = require('gulp');
 const browserSync = require('browser-sync');
-var sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const image = require("gulp-image");
 const htmlmin = require('gulp-htmlmin');
 const ghPages = require("gulp-gh-pages");
+
 gulp.task('server', function() {
 
     browserSync({
@@ -40,8 +41,9 @@ gulp.task('watch', function() {
 gulp.task('html', function () {
     return gulp.src("src/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest("dist/"));
-});
+        .pipe(gulp.dest("dist/"))
+        .pipe(browserSync.stream());
+        });
 
 gulp.task('scripts', function () {
     return gulp.src("src/js/**/*.js")
@@ -71,7 +73,7 @@ gulp.task('images', function () {
 gulp.task('ghDeploy', function() {
     return gulp.src('dist/**/*')
     .pipe(ghPages({
-    remoteUrl: 'https://github.com/ivanzayarnuk/Heart-Rate-Monitors.git',
+    remoteUrl: 'https://github.com/ivanzayarnuk/portfolio.git',
 }));
 });
 
