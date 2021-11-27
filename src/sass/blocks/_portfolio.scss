@@ -19,7 +19,9 @@
     }
 
     &__item {
-        filter: grayscale(100%);
+        justify-self: center;
+        align-self: center;
+        filter: grayscale(70%);
         transition: all 0.5s;
         img {
             width: 100%;
