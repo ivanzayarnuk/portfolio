@@ -13,9 +13,10 @@
 }
 
 @mixin svg_red {
-    path{
-        transition: 0.5s all;
-        fill: red;
-    }
+        path{
+            transition: 0.5s all;
+            fill: red;
+        }
+    
 
 }

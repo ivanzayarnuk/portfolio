@@ -8,11 +8,17 @@
     align-items: flex-end;
     justify-content: space-between;
     cursor: pointer;
+    &:hover {
+        span {
+            background-color: $main-color;
+        } 
+    }
     span {
         display: block;
         width: 30px;
         height: 3px;
         background-color: #151812;  
+        transition: all 0.6s;  
     }
     
     span.long {
@@ -50,10 +56,12 @@
         top: 25px;
         right: 25px;
         cursor: pointer;
-        // transition: 0.5s all;
-        &:hover {
-            @include svg_red;
-    }
+        transition: all .6s;
+        svg {
+            &:hover {
+                @include svg_red;
+            }
+        }
     }
 
     &__list {
@@ -69,7 +77,6 @@
         margin-bottom: 15px;
         text-decoration: none;
         text-decoration-color: red;
-
         
         &::before {
             content: '';
@@ -92,7 +99,6 @@
         a {
             color: #FFFFFF;
             transition: all .6s;
-
             &:hover {
                 text-decoration-style: dotted;
             }
@@ -108,9 +114,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: all .6s;
         a:hover {
             @include svg_red;
-    }
+        }
     }
 
     &__overlay {
