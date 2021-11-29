@@ -1,0 +1,99 @@
+@media (max-width: 1330px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .about {
+        padding-top: 90px;
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        &__skills {
+            column-gap: 20px;
+            grid-template-columns: repeat(2,250px);
+            &-item {
+                grid-template-columns: 40px 195px;
+                column-gap: 15px;
+            }
+        }
+    }
+
+    .resume {
+        padding-top: 90px;
+        &__wrapper {
+            padding: 60px 40px 0 35px;
+            grid-template-columns: repeat(2,400px);
+            column-gap: 40px;
+            justify-content: center;
+        }
+
+        &__item {
+            &-body {
+                width: 400px;
+            }
+        }
+    }
+
+    .skills {
+        padding-top: 90px;
+        &__wrapper {
+            grid-template-columns: repeat(auto-fill,235px);
+            grid-template-rows: 235px 235px;
+
+            gap: 5px;
+            margin: 60px 0 0 0;
+            justify-content: center;
+        }
+        &__item {
+            padding: 10px 10px 10px 10px;
+            // grid-template-rows: 65px minmax(90px, auto);
+            grid-template-rows: 65px 128px;
+            // grid-auto-rows: 65px;
+
+        }
+
+        &__ratings {
+            column-gap: 30px;
+            grid-template-columns: repeat(auto-fill, 300px);
+            justify-content: center;
+            &-line {
+                width: 300px;
+            }
+        }
+    }
+
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fill, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizontal, .vertical{
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 335px 500px;
+        }
+
+        &__form {
+            grid-template: 35px 160px 45px/repeat(2,230px);
+        }
+
+        &__triggers {
+            column-gap: 55px;
+        }
+    }
+
+}

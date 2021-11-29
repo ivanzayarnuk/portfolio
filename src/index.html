@@ -113,7 +113,7 @@
             <span class="long"></span>
             <span></span>
         </div>
-        
+
         <div class="container">
             <div class="title_fz16 promo__subtitle">Меня зовут Иван Заярнюк</div>
             <h1 class="title  title_fz48 promo__title">Я web-разработчик из города Кропивницкий</h1>
@@ -128,7 +128,21 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/my_photo.jpg" alt="photo">
+                    <!-- <img srcset="img/my_photo_min.jpg 300w,
+                                 img/my_photo.jpg 400w"
+                         sizes="(max-width: 447px) 280px,
+                                (min-width: 446px) 400px"
+                    src="img/main_photo.jpg" alt="photo"> -->
+                    <picture>
+                        <source type="image/webp" media="(max-width: 576px)" srcset="img/my_photo_min.webp">
+                        <source media="(min-width: 577px)" srcset="img/my_photo.jpg">
+                        <img src="img/my_photo.jpg" alt="">
+                    </picture>
+
+                    <!-- <picture>
+                        <source type="image/webp" srcset="img/my_photo_min.webp">
+                        <img src="img/my_photo.jpg" alt="">
+                    </picture> -->
                 </div>
                 <div class="about__descr">
                     <h2 class="title title_fz16 about__title">Про меня</h2>
@@ -175,7 +189,7 @@
         </div>
     </section>
 
-    <section class="resume">
+    <section class="resume"> 
         <div class="container">
             <h2 class="title title_fz16 title_general">Опыт</h2>
             <div class="title title_fz36 title_sub">Чем я буду полезен</div>
@@ -254,7 +268,7 @@
             </div>
         </div>
     </section>
-    <!-- /.resume -->
+
 
     <section class="skills">
         <div class="container">
@@ -397,9 +411,9 @@
             </div>
         </div>
     </section>
-    <!-- /.skills -->
 
-    <section class="portfolio">
+
+    <section class="portfolio"> 
         <div class="container">
             <h2 class="title title_fz16 title_general">Портфолио</h2>
             <div class="title title_fz36 title_sub">Мои работы</div>
@@ -434,7 +448,7 @@
             </div>
         </div>
     </section>
-    <!-- /.portfolio -->
+
 
     <section class="price">
         <div class="container">
@@ -485,16 +499,19 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- /.price -->
+
 
     <section class="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
-                    <img src="img/my_photo.jpg" alt="photo">
+                    <picture>
+                        <source type="image/webp" media="(max-width: 992px)" srcset="img/my_photo_min.webp">
+                        <source media="(min-width: 993px)" srcset="img/my_photo.jpg">
+                        <img src="img/my_photo.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="contacts__descr">
                     <h2 class="title title_fz16 contacts__title">Контакты</h2>
@@ -518,12 +535,12 @@
 
                         <form action="#" class="contacts__form">
                             <div class="contacts__input">
-                                <input name="name" id="name" type="text">
+                                <input required name="name" id="name" type="text">
                                 <label for="name">Ваше имя</label>
                             </div>
 
                             <div class="contacts__input">
-                                <input name="email" id="email" type="email">
+                                <input required name="email" id="email" type="email">
                                 <label for="email">Ваша почта</label>
                             </div>
 
@@ -532,7 +549,13 @@
                                 <label for="text">Ваше сообщение</label>
                             </div>
                         
-                            <div><button class="contacts__btn btn">Отправить сообщение</button></div>
+                            <div class="contacts__triggers">
+                                <button required class="contacts__btn btn">Отправить сообщение</button>
+                                <div class="contacts__policy">
+                                    <input required type="checkbox">
+                                    <span>Я согласен(а) с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></span>
+                                </div>
+                            </div>
                         </form>
 
                     </div>
@@ -541,7 +564,7 @@
             </div>
         </div>
     </section>
-    <!-- /.contacts -->
+
     <script src="js/script.js"></script>
 </body>
 </html>

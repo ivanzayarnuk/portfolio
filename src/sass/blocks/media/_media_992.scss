@@ -1,0 +1,89 @@
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+            &-item {
+                grid-template-columns: 40px 320px;
+                column-gap: 20px;
+            }
+        }
+    }
+    .resume {
+        padding-top: 90px;
+        &__wrapper {
+            padding: 40px 10px 0 10px;
+            grid-template-columns: repeat(2,350px);
+            column-gap: 12px;
+        }
+
+        &__item {
+            &-body {
+                width: 330px;
+                padding-left: 45px;
+            }
+        }
+    }
+
+    .skills {
+        &__wrapper {
+            margin: 40px 0 0 0;
+            grid-auto-rows: auto;
+        }
+        &__item {
+            grid-auto-rows: minmax(128px, auto);
+        }
+
+        &__ratings {
+            padding-top: 90px ;
+            column-gap: 20px;
+            grid-template-columns: repeat(auto-fill, 350px);
+
+            &-line {
+                width: 300px;
+            }
+        }
+    }
+
+    .price {
+        margin-top: 0;
+        &__wrapper {
+            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, 330px);
+            padding: 0 0;
+        }
+    }
+
+    .contacts {
+        padding: 60px 40px;
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 260px 445px;
+        }
+
+        &__form {
+            grid-template: 40px 100px 45px/repeat(2,215px);
+            row-gap: 25px;
+            column-gap: 20px;
+        }
+
+        &__triggers {
+            column-gap: 30px;
+        }
+
+        &__btn {
+            padding: 0px 25px;
+        }
+    }
+}
